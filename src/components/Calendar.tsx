@@ -77,18 +77,18 @@ const Calendar = ({onDaySelect, locale = enUS}: {
         <div className="flex items-center justify-between mb-4">
           <button
             onClick={setPreviousMonth}
-            className="p-1 sm:p-2 border-0 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+            className="p-1 sm:p-2 border-0 focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
           >
-            <div className="h-4 w-4 sm:h-6 sm:w-6 text-gray-600 dark:text-gray-400">&lt;</div>
+            <div className="h-7 w-7 sm:h-6 sm:w-6 text-gray-600 dark:text-gray-400">&lt;</div>
           </button>
           <h2 className="text-lg sm:text-xl font-semibold text-gray-800 dark:text-gray-200 capitalize">
             {format(currentMonth, 'MMMM yyyy', {locale})}
           </h2>
           <button
             onClick={setNextMonth}
-            className="p-1 sm:p-2 border-0 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+            className="p-1 sm:p-2 border-0 focus:outline-none hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
           >
-            <div className="h-4 w-4 sm:h-6 sm:w-6 text-gray-600 dark:text-gray-400">&gt;</div>
+            <div className="h-7 w-7 sm:h-6 sm:w-6 text-gray-600 dark:text-gray-400">&gt;</div>
           </button>
         </div>
         <div className="grid grid-cols-7 gap-1 sm:gap-2 text-center capitalize">
@@ -105,7 +105,7 @@ const Calendar = ({onDaySelect, locale = enUS}: {
             <div
               key={day.toISOString()}
               onClick={() => handleDaySelect(day)}
-              className={`${getDayClassName(day)} h-12 md:h-14 md:w-14`}
+              className={`${getDayClassName(day)} h-10 md:h-14 md:w-14`}
             >
               <div className="text-xs sm:text-sm">{day.getDate()}</div>
             </div>

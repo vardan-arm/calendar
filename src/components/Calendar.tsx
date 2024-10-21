@@ -8,7 +8,9 @@ import {
   endOfWeek,
   eachDayOfInterval,
   subMonths,
-  addMonths, isSameDay, isSameMonth
+  addMonths,
+  isSameDay,
+  isSameMonth
 } from "date-fns";
 
 function getWeekdays(locale: Locale) {
